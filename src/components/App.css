@@ -1,0 +1,9 @@
+.app {
+  margin: 50px;
+  padding: 20px;
+  width: 500px;
+  height: 100%;
+  color: #032444;
+  background: lightsteelblue;
+  font-size: 18px;
+}
