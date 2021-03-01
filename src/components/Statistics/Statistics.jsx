@@ -2,12 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Notification from '../Notification/Notification';
-// import {useStyles} from './TransactionHistory.style';
 
 const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
-    //   const classes = useStyles();
     return (
-        // <div className={classes.tr}>
         total !== 0  ?
             < div >
                 <p> Good: <span> {good}</span></p>
@@ -20,12 +17,19 @@ const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
   );
 };
 
+Statistics.defaultProps = {
+    good: 0,
+    bad: 0,
+    neutral: 0,
+    total: 0,
+    positivePercentage: 0, 
+};
+
 Statistics.propTypes = {
     good: PropTypes.number,
     bad: PropTypes.number,
     neutral: PropTypes.number,
     total: PropTypes.number,
-    positivePercentage: PropTypes.number,
-  
+    positivePercentage: PropTypes.number, 
 };
 export default Statistics;
